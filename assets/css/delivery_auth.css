@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at 50% 10%, #1a1a1a, #0e0e0e);
+    color: #f5f5f5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.auth-box {
+    background: rgba(20, 20, 20, 0.85);
+    border: 1px solid rgba(0, 255, 170, 0.3);
+    box-shadow: 0 0 30px rgba(0, 255, 149, 0.2), inset 0 0 10px rgba(0, 255, 157, 0.1);
+    padding: 40px 50px;
+    border-radius: 15px;
+    width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.auth-box h1 {
+    font-size: 2rem;
+    color: #00ff88;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px #00ff88;
+}
+
+.subtitle {
+    color: #aaa;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #111;
+    color: #f5f5f5;
+    outline: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #00ff88;
+    box-shadow: 0 0 10px #00ff88;
+}
+
+.btn {
+    background: #00ff88;
+    color: #0e0e0e;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 20px rgba(0, 255, 179, 0.3);
+}
+
+.btn:hover {
+    background: #00e6a1;
+    box-shadow: 0 0 25px #00ff88, 0 0 50px #00ff88;
+}
+
+.switch {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.switch a {
+    color: #00ff88;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.switch a:hover {
+    text-shadow: 0 0 8px #00ff88;
+}
+
+.error {
+    background: rgba(255, 0, 51, 0.1);
+    border: 1px solid #00ff88;
+    color: #66ffa1;
+    padding: 8px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* Glow animation for aesthetic background */
+@keyframes glow {
+    0% { box-shadow: 0 0 10px #00ff88; }
+    50% { box-shadow: 0 0 30px #00ff88; }
+    100% { box-shadow: 0 0 10px #00ff88; }
+}

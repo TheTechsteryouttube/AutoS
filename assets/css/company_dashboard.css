@@ -1,0 +1,315 @@
+/* General Layout */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #181818;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 1.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Heading */
+h2 {
+  margin-bottom: 0.8rem;
+  color: #f5f5f5;
+}
+
+/* Buttons (compact) */
+button {
+  cursor: pointer;
+  border: none;
+  width: 80%;
+  padding: 6px;
+  border-radius: 5px;
+  font-size: 13px;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-btn {
+  background: #e51e1e;
+  color: #fff;
+  margin-bottom: 0.8rem;
+}/* General Layout */
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #181818;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 1.5rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Heading */
+h2 {
+  margin-bottom: 0.8rem;
+  color: #f5f5f5;
+  text-align: center;
+}
+
+/* Default Buttons */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Add Company Button (full width) */
+.add-btn {
+  display: block;
+  width: 80%;
+  margin: 0 auto 0.8rem auto;
+  padding: 8px;
+  background: #e51e1e;
+  color: #fff;
+  text-align: center;
+}
+
+.add-btn:hover {
+  background: #e51e1e;
+}
+
+/* Action Buttons (compact) */
+.edit-btn, 
+.delete-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  padding: 6px 10px;
+  margin: 0 3px;
+  font-size: 13px;
+  color: #fff;
+}
+
+.edit-btn {
+  background: #43a047;
+}
+
+.edit-btn:hover {
+  background: #2e7d32;
+}
+
+.delete-btn {
+  background: #e53935;
+}
+
+.delete-btn:hover {
+  background: #b71c1c;
+}
+
+/* Table */
+.company-table {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+  background: #222;
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 13px;
+}
+
+.company-table th, 
+.company-table td {
+  padding: 8px 10px;
+}
+
+.company-table th {
+  background: #333;
+  font-weight: 600;
+}
+
+.company-table tr {
+  border-bottom: 1px solid #444;
+}
+
+.company-table tr:hover {
+  background: #2a2a2a;
+}
+
+/* Column Alignment */
+.company-table th:first-child,
+.company-table td:first-child,
+.company-table th:nth-child(2),
+.company-table td:nth-child(2) {
+  text-align: left;   /* ID & Company Name */
+}
+
+.company-table th:last-child,
+.company-table td:last-child {
+  text-align: center; /* Actions */
+  white-space: nowrap;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #1f1f1f;
+  padding: 1rem;
+  border-radius: 6px;
+  width: 280px;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h3 {
+  margin-bottom: 0.8rem;
+  font-size: 15px;
+  color: #fff;
+}
+
+.modal-content input {
+  width: 90%;
+  padding: 6px;
+  margin-bottom: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background: #2c2c2c;
+  color: #fff;
+  font-size: 13px;
+}
+
+/* Modal Buttons */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.save-btn {
+  background: #e51e1e;
+  color: #fff;
+  font-size: 13px;
+  padding: 6px 10px;
+}
+
+.save-btn:hover {
+  background: #c01515;
+}
+
+.cancel-btn {
+  background: #555;
+  color: #fff;
+  font-size: 13px;
+  padding: 6px 10px;
+}
+
+.cancel-btn:hover {
+  background: #333;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+.company-table th, 
+.company-table td {
+  padding: 8px 10px;         /* reduced padding */
+  text-align: left;
+}
+
+.company-table th {
+  background: #333;
+  font-weight: 600;
+}
+
+.company-table tr {
+  border-bottom: 1px solid #444;
+}
+
+.company-table tr:hover {
+  background: #2a2a2a;
+}
+
+/* Modal (smaller + centered) */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #1f1f1f;
+  padding: 1rem;
+  border-radius: 6px;
+  width: 280px;              /* smaller width */
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h3 {
+  margin-bottom: 0.8rem;
+  font-size: 15px;
+  color: #fff;
+}
+
+.modal-content input {
+  width: 90%;
+  padding: 6px;
+  margin-bottom: 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background: #2c2c2c;
+  color: #fff;
+  font-size: 13px;
+}
+
+/* Modal Buttons */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.save-btn {
+  background: #e51e1e;
+  color: #fff;
+  font-size: 13px;
+  padding: 6px 10px;
+}
+
+.save-btn:hover {
+  background: #c01515;
+}
+
+.cancel-btn {
+  background: #555;
+  color: #fff;
+  font-size: 13px;
+  padding: 6px 10px;
+}
+
+.cancel-btn:hover {
+  background: #333;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}

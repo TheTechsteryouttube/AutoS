@@ -1,0 +1,137 @@
+/* --- 1. GLOBALS & FONT IMPORTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg-dark-primary: #0a0a0a;
+    --bg-dark-secondary: #161616;
+    --accent-red: #e50914;
+    --accent-red-hover: #f40612;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --border-color: #2a2a2a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark-primary);
+    color: var(--text-primary);
+    line-height: 1.7;
+}
+
+/* --- 2. HEADER --- */
+.header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1621594110330-182f2f545a27?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+    padding: 80px 20px;
+    text-align: center;
+    color: var(--text-primary);
+    position: relative;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.header a {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.header a:hover {
+    color: var(--accent-red);
+}
+
+/* --- 3. BLOG CONTAINER & GRID LAYOUT --- */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* --- 4. BLOG CARD STYLING --- */
+.blog-card {
+    background: var(--bg-dark-secondary);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(229, 9, 20, 0.5);
+}
+
+.card-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Ensures content fills the card */
+}
+
+.blog-card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    color: var(--text-primary);
+}
+
+.blog-card .meta {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.blog-card p {
+    color: var(--text-primary);
+    flex-grow: 1; /* Pushes the 'Read More' link to the bottom */
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: var(--accent-red);
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+    align-self: flex-start; /* Aligns button to the left */
+}
+
+.read-more:hover {
+    color: var(--accent-red-hover);
+    transform: translateX(5px);
+}
+
+/* --- 5. RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    .blog-container {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        padding: 0 15px;
+        margin: 20px auto;
+    }
+}

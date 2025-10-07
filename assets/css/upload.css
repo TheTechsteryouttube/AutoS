@@ -1,0 +1,83 @@
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+form {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 450px;
+    margin: 40px auto;
+    box-shadow: none !important;
+}
+label { display: block; margin-top: 10px; }
+input, select, textarea, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+}
+input, select, textarea {
+    background: #2b2b2b;
+    color: #fff;
+}
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+button {
+    background: red;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover {
+    background: #b30000;
+}
+.progress-container {
+    margin-top: 15px;
+    width: 100%;
+    background: #2b2b2b;
+    border-radius: 8px;
+}
+#progressBar {
+    height: 20px;
+    width: 0%;
+    background: red;
+    border-radius: 8px;
+    transition: width 0.3s;
+}
+#status { margin-top: 10px; font-weight: bold; }
+.progress-container {
+    width: 100%;
+    background: #333;
+    border-radius: 8px;
+    margin-top: 10px;
+    height: 20px;
+    overflow: hidden;
+}
+#progressBar {
+    height: 100%;
+    width: 0%;
+    background: red;
+    transition: width 0.3s ease;
+}
+
+  /* Progress bar */
+  .progress-container {
+    width: 100%;
+    background: #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 8px;
+    overflow: hidden;
+  }
+  #progressBar {
+    height: 100%;
+    width: 0;
+    background: #4caf50;
+    transition: width 0.3s;
+  }

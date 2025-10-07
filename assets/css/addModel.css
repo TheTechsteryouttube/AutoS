@@ -1,0 +1,70 @@
+/* Container */
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+  
+  /* Heading */
+  .form-container h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff; /* aqua blue accent */
+  }
+  
+  /* Labels */
+  .form-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ddd;
+  }
+  
+  /* Inputs and Select */
+  .form-container input,
+  .form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 18px;
+    border: none;
+    border-radius: 6px;
+    background: #2c2c2c;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+  }
+  
+  .form-container input:focus,
+  .form-container select:focus {
+    background: #333;
+    border: 1px solid #ff0000;
+  }
+  
+  /* Submit Button */
+  .form-container button {
+    width: 100%;
+    padding: 10px;
+    background: #ff0000;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .form-container button:hover {
+    background: #b30000;
+  }
+  

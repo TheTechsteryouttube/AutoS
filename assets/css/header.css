@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Wrapper (Glassy Navbar Background) */
+.wrapper {
+    width: 100%;
+    background: rgba(19, 18, 18, 0.4);     /* semi-transparent black */
+    backdrop-filter: blur(12px);           /* glass blur effect */
+    -webkit-backdrop-filter: blur(12px);   /* Safari support */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+    position: fixed;   /* keeps header fixed on top */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navbar */
+.nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.nav-logo p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff; /* White text */
+    letter-spacing: 1px;
+}
+.nav-logo a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Menu */
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-right: 1px;
+}
+
+.nav-menu ul li {
+    margin-left: 25px;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 16px;
+    transition: 0.3s ease;
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-shadow: 0 0 5px rgba(255,255,255,0.2); /* subtle glow */
+}
+
+/* Hover + Active effects */
+.nav-menu ul li a:hover {
+    color: #fff;
+    background: #e50914;
+    border-radius: 30px;
+    transition: 0.3s ease;
+}
+
+.nav-menu ul li a.active {
+    color: #fff;
+    background: #e50914;
+    border-radius: 30px;
+}
+.nav-icons{
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+/* ============================= */
+/* Centered Search Bar (Option 1) */
+/* ============================= */
+.search-container {
+    flex: 1;                 /* takes available space */
+    display: flex;
+    justify-content: center; /* keeps it centered */
+    margin: 0 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,0.1); /* subtle glass effect */
+    border-radius: 25px;
+    padding: 5px 12px;
+    transition: all 0.3s ease-in-out;
+    width: 300px; /* fixed width */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4); /* soft shadow to lift it */
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    background: transparent; /* keeps it dark */
+    color: #ffffff;          /* white text */
+}
+
+/* Placeholder color */
+.search-bar input::placeholder {
+    color: #bbb; /* subtle gray placeholder */
+}
+
+/* On focus, give a glowing border */
+.search-bar input:focus {
+    outline: none;
+    border: none;
+    color: #fff;
+}
+
+.search-bar:focus-within {
+    background: rgba(184, 165, 166, 0.2); /* slight red glow when active */
+    box-shadow: 0 0 8px rgba(187, 162, 164, 0.6);
+}
+
+#searchIcon {
+    color: #fff;
+    font-size: 18px;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#searchIcon:hover {
+    color: #e50914;
+}
+
+/* ============================= */
+/* Grid for results (Cards) */
+/* ============================= */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 100px 20px 20px; /* top padding to avoid overlap with fixed navbar */
+}
+
+.card {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(229, 9, 20, 0.6);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #e50914;
+}
+
+.card p {
+    font-size: 14px;
+    color: #ddd;
+    margin-top: 6px;
+}
+
+/* Responsive - Mobile */
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-menu ul li {
+        margin: 10px 0;
+    }
+
+    .search-container {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+}

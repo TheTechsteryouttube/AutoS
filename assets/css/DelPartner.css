@@ -1,0 +1,141 @@
+/* --- Root Variables & Global Styles --- */
+:root {
+    --dark-bg: #1a1a1a;
+    --sidebar-bg: #212529;
+    --card-bg: #2b2b2b;
+    --accent-green: #03e99f;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --border-color: #404040;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    font-size: 16px;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--sidebar-bg);
+    padding-top: 20px;
+    border-right: 1px solid var(--border-color);
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: var(--accent-green);
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: all 0.3s ease;
+}
+
+.sidebar a:hover, .sidebar a.active {
+    background-color: rgba(3, 233, 159, 0.1); /* Faint green background */
+    color: var(--accent-green);
+    border-left: 3px solid var(--accent-green);
+    padding-left: 22px; /* Adjust padding to keep text aligned */
+}
+
+.sidebar .logout {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+/* --- Main Content Area --- */
+.main-content {
+    margin-left: 250px; /* Must be same as sidebar width */
+    padding: 30px;
+}
+
+.main-content h2 {
+    color: var(--accent-green);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* --- Order Cards (Loaded Dynamically) --- */
+#active-orders-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.order-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.order-card h3 {
+    margin-top: 0;
+    color: var(--text-primary);
+}
+
+.order-card p {
+    color: var(--text-secondary);
+    margin: 8px 0;
+}
+
+.update-form {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 15px;
+    align-items: center;
+}
+
+.update-form input, 
+.update-form select {
+    background-color: var(--dark-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 0.9rem;
+    flex-grow: 1; /* Allows input to take available space */
+}
+
+.update-form input::placeholder {
+    color: var(--text-secondary);
+}
+
+.update-button {
+    background-color: var(--accent-green);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.update-button:hover {
+    background-color: #fff;
+    box-shadow: 0 0 10px var(--accent-green);
+}
+
+.error {
+    color: #ff6b6b;
+}
